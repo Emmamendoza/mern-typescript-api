@@ -1,1 +1,1 @@
-# mern-typescript
+# mern-typescript-api
