@@ -1,5 +1,4 @@
 import { RequestHandler } from 'express';
-import { url } from 'inspector';
 import Video from './Video';
 
 export const getVideos: RequestHandler = async (req, res) => {
