@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "cross-env NODE_ENV=development ts-node-dev src/index.ts",
-    "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --collectCoverage",
     "test:watch": "npm run test -- --watchAll"
   },
   "keywords": [],
@@ -37,7 +37,6 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "collectCoverage": true,
     "testTimeout": 30000,
     "coveragePathIgnorePatterns": [
       "/node_modules/",
