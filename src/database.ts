@@ -11,11 +11,6 @@ const connectionDB = NODE_ENV === 'test' ? config.MONGO_DATABASE_TEST : config.M
         pass: config.MONGO_PASSWORD
     }
 
-    try {
-        const db = await mongoose.connect(`mongodb://${config.MONGO_HOST}/${connectionDB}`);
-        console.log('Database is connected to: ', db.connection.name );
-    } catch (error) {
-        console.error(error);
-    }
-
+    const db = await mongoose.connect(`mongodb://${config.MONGO_HOST}/${connectionDB}`);
+    console.log('Database is connected to: ', db.connection.name );
 })()
