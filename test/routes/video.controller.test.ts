@@ -21,12 +21,6 @@ describe("Testing Video Routes", () => {
         expect(response.body).toBeInstanceOf(Array)
     })
 
-    test("GET Videos", async () => {
-
-        const response = await (await request.get('/videos'))
-        expect(response.statusCode).toBe(500)
-    })
-
     test("GET Video by Id", async () => {
 
         const allVideos = await request.get('/videos')

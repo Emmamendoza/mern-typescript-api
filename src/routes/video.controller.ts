@@ -2,12 +2,8 @@ import { RequestHandler } from 'express';
 import Video from './Video';
 
 export const getVideos: RequestHandler = async (req, res) => {
-    try {
         const videos = await Video.find()
         return res.json(videos);
-    } catch (error) {
-        res.json(error);
-    }
 };
 
 export const getVideo: RequestHandler = async (req, res) => {
@@ -27,7 +23,6 @@ export const createVideo: RequestHandler = async (req, res) => {
     }
 
     const video = new Video(req.body)
-    console.log(video);
     const savedVideo = await video.save()
     return res.json(savedVideo);
 };
